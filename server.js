@@ -29,7 +29,9 @@ const initializeDbAndServer = async (request, response) => {
                 reason_for_loan TEXT NOT NULL,
                 employment_address VARCHAR(250) NOT NULL,
                 date_applied TEXT NOT NULL,
-                loan_status TEXT DEFAULT "PENDING"
+                final_approval TEXT DEFAULT "PENDING",
+                approved_by_verifier TEXT DEFAULT "PENDING",
+                approved_by_admin TEXT DEFAULT "PENDING"
             )`
         )
 
